@@ -1,0 +1,44 @@
+/* CSS Document */
+body{line-height:150%;margin:0;padding:0;text-align:left;font-size:12px;font-family:"宋体";color:#333;}
+body>div{margin:0 auto;text-align:left;clear:both;}
+div{text-align:left;}
+h1,h2,h3,h4,h5,h6,dl,dt,dd,ul,li,p,span,i,em{margin:0;padding:0;font-style:normal;}
+h1,h2,h3,h4,h5,h6{font-size:14px;}
+dl,dt,dd,ul,li{list-style-type:none;display:block;}
+img{border:0;}
+table{border-collapse:collapse;border-spacing:0}
+from,select,input{margin:0;padding:0;vertical-align:middle;}
+a{color:#000;text-decoration:none;}
+a:hover{text-decoration:underline;}
+.greeting{text-align:center; padding-top:50px; font:normal 14px/24px "Comic Sans MS";}
+.clear{clear:both;visibility:hidden;height:0;line-height:0;font-size:0;}
+.clearfix:after{clear:both;content:".";height:0;display:block;visibility:hidden;}
+.clearfix{*zoom:1;}
+.geo_map{position:relative; width:0px; height:0px; background : #505050}
+.geo_map #vmap_us{position:absolute;left:724px;top:30px;}
+.geo_map #vmap_cn{position:absolute;left:724px;top:260px;}
+.geo_map #vmap_world{position:absolute;left:0px;top:0px;}
+.card{background: #E7E2DF; width:1344px; height : 756px;}
+.card img{position:absolute; margin-left:372px; margin-top:135px}
+.header{width:1024px;height:411px;background: url(../imgs/entrance.png) no-repeat;display:none}
+.time_line{position:relative; width:1024px; height:682px; display : none;}
+.time_line .background{display: inline; margin:0 auto;position:absolute;}
+.time_line .moving_character{display:inline; left:40px; top:300px; position:absolute;}
+.wrapper { background: #E7E2DF; height: 408px; width: 1022px; border: 1px solid #CCC; position: relative; margin: 0px auto; display : none;}
+.title_bar { font: 18px/45px "Comic Sans MS"; color: #FFF; padding: 0px 14px 14px; height: 45px; position: absolute; left: -1px; top: -1px; background: url(../imgs/timeline_bar.jpg) no-repeat; width: 422px; z-index: 100; }
+.geo_nav { background: #F9F1E6; float: left; height: 344px; width: 422px; padding-top: 64px; padding-left: 25px; position: absolute; }
+.geo_nav ul li { font: 18px/107px "Comic Sans MS"; color: #FFF; text-align: center; height: 107px; width: 130px; cursor: pointer; background: #707070; margin: 0px 3px 3px 0px; float: left; }
+.geo_nav ul .selected { background: #750075; }
+.album { float: right; width: 600; height: 400px;}
+.album_content { height: 400px;}
+.bd_lbtn { padding: 0px 0px 0px 5px; float: left; width: 15px; background: url(../imgs/bd_lbtn.jpg) no-repeat; display: block; height: 21px; margin-top: 200px; }
+.bd_rbtn { float: right; width: 19px; padding-top: 0px; padding-right: 5px; display: block; height: 21px; margin-top: 200px; background: url(../imgs/bd_rbtn.jpg) no-repeat; }
+.bd_lbtn:hover { background: url(../imgs/hbd_lbtn.jpg) no-repeat; }
+.bd_rbtn:hover { background: url(../imgs/hbd_rbtn.jpg) no-repeat; }
+.album_nav { float: left; height: 400px; width: 500px; overflow:hidden; position:relative}
+.bd_long { width: 4500px; position: absolute; left: 0px; top: 0px; height:400px; }
+.bd_long ul li { height: 400px; width: 500px; float: left; font-family: "Comic Sans MS"; }
+.bc_chgTitle { height: 54px; text-align: center; width: 500px; padding-top: 9px; font: bold 16px/54px "Comic Sans MS"; }
+.bd_lbtn img,.bd_rbtn img{cursor:pointer}
+.bd_long ul li p { font-size: 14px; line-height: 22px; padding-top: 100px; }
+.cong{text-align:center;margin:50px 0; font:normal 14px/24px "Comic Sans MS"; display: none;}

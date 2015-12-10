@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>jVectorMap demo</title>
+  <link rel="stylesheet" href="./css/jquery-jvectormap-2.0.3.css" type="text/css" media="screen"/>
+  <script src="./js/jquery.js"></script>
+  <script src="./js/jquery-jvectormap-2.0.3.min.js"></script>
+  <script src="./js/maps/jquery.vmap.us.js"></script>
+</head>
+<body>
+  <div id="world-map" style="width: 600px; height: 400px"></div>
+  <script>
+  var ddd = {
+        "US-VA": 1,
+        "US-OH": 1,
+        "US-FL": 1,
+        "US-MA": 1,
+        "US-DC": 1
+    };
+    $(function(){
+      $('#world-map').vectorMap({
+		map: 'us_mill',
+		regionStyle: {
+				initial: {
+							"fill-opacity": 1,
+							stroke: 'none',
+							"stroke-width": 0,
+							"stroke-opacity": 1
+						}
+					},
+        series: {
+				regions: [{
+							values: ddd,
+							scale: ['#FFFFFF', '#C9DFAF'],
+							normalizeFunction: 'linear'
+						}]
+				}
+		})
+	  });
+  </script>
+</body>
+</html>

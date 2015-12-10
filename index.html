@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Timeline of Yuki and Yubo</title>
+<link href="./css/style.css" type="text/css" rel="stylesheet"/>
+<link href="./css/jquery-jvectormap-2.0.3.css" media="screen" rel="stylesheet" type="text/css"/>
+<script type="text/javascript" src="./js/jquery.js"></script>
+<script type="text/javascript" src="./js/jquery-jvectormap-2.0.3.min.js"></script>
+<script src="./js/maps/jquery.vmap.us.js" ></script>
+<script src="./js/maps/jquery.vmap.china.js"></script>
+<script src="./js/maps/jquery.vmap.world.js"></script>
+<link href="./css/font-awesome.min.css" type="text/css" rel="stylesheet"/>
+</head>
+<script language="javascript">
+$(document).ready(function(){
+$(".card").dblclick(function(){
+	$(".card").fadeOut("slow");
+	$(".header").fadeIn("slow");
+	$(".time_line").css("display","block");
+	$(".time_line").fadeIn("slow");
+	$(".wrapper").fadeIn("slow");
+	$(".geo_map").css({"width":"1024","height":"460"});
+	$("#vmap_us").css({"width":"300","height":"200"});
+	$("#vmap_cn").css({"width":"300","height":"200"});
+	$("#vmap_world").css({"width":"724","height":"460"});
+	var us_region = {
+        "US-VA": 1,
+        "US-OH": 1,
+        "US-FL": 1,
+        "US-MA": 1,
+        "US-DC": 1
+    };
+	var ch_region = {
+        "CN-31": 1
+    };
+	var world_region = {
+        "KR": 1,
+		"BS": 1,
+		"US": 1,
+		"CN": 1
+    };
+	
+      jQuery(document).ready(function () {
+      $('#vmap_us').vectorMap({
+		map: 'us_mill',
+		//backgroundColor: "#FFFFFF",
+		regionStyle: {
+				initial: {
+							"fill-opacity": 1,
+							stroke: 'none',
+							"stroke-width": 0,
+							"stroke-opacity": 1
+						}
+					},
+        series: {
+				regions: [{
+							values: us_region,
+							scale: ['#FFFFFF', '#C9DFAF'],
+							normalizeFunction: 'linear'
+						}]
+				},
+		markerStyle: {
+        initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+        }
+        },
+		markers: [
+					{latLng: [42.42, -71.30], name: 'Boston 2013/01'},
+					{latLng: [38.54, -77.02], name: 'Washinton D.C. 2014/08'},
+					{latLng: [39.59, -82.59], name: 'Columbus Ohio. 2014/08'},
+					{latLng: [25.47, -80.13], name: 'Miami, Florida 2013/12'},
+					{latLng: [27.57, -82.27], name: 'Tampa, Florida 2014/05'},
+					{latLng: [28.32, -81.22], name: 'Orlando, Florida 2013/12'},
+					{latLng: [24.33, -80.13], name: 'Key West, Florida 2013/12'},
+					//{latLng: [25.03, -77.20], name: 'Bahamas, caribbean 2013/12'},
+					{latLng: [38.52, -77.10], name: 'Falls Church, Virgina 2014/08'}
+				]
+					
+		});
+
+	  $('#vmap_cn').vectorMap({
+	  map: 'cn_mill',
+	  //backgroundColor: "#FFFFFF",
+	  regionStyle: {
+				initial: {
+							"fill-opacity": 1,
+							stroke: 'none',
+							"stroke-width": 0,
+							"stroke-opacity": 1
+						}
+					},
+		series: {
+				regions: [{
+							values: ch_region,
+							scale: ['#FFFFFF', '#C9DFAF'],
+							normalizeFunction: 'linear'
+						}]
+				},
+		markerStyle: {
+        initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+        }
+        },
+		markers: [
+					{latLng: [30.40, 120.51], name: 'Shanghai, hometown!'},
+				]
+		});
+		
+		$('#vmap_world').vectorMap({
+		map: 'world_mill',
+		//backgroundColor: "#FFFFFF",
+		regionStyle: {
+				initial: {
+							"fill-opacity": 1,
+							stroke: 'none',
+							"stroke-width": 0,
+							"stroke-opacity": 1
+						}
+					},
+		series: {
+				regions: [{
+							values: world_region,
+							scale: ['#FFFFFF', '#C9DFAF'],
+							normalizeFunction: 'linear'
+						}]
+				},
+		markerStyle: {
+        initial: {
+        fill: '#F8E23B',
+        stroke: '#383f47'
+        }
+        },
+		markers: [
+					{latLng: [30.40, 120.51], name: 'Shanghai, hometown!'},
+					{latLng: [25.03, -77.20], name: 'Bahamas, Caribbean 2013/12'},
+					{latLng: [38.54, -77.02], name: 'Washinton D.C. 2014/08'},
+					{latLng: [33.34, 126.58], name: 'Seoul,Korea 2014/05'}
+				]
+		});
+	  
+      });
+})
+})
+</script>
+
+<script>
+$(document).ready(function(){
+	$(".map_area_osu").click(function(){
+		var moveleft = $(".map_area_osu").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_miami").click(function(){
+		var moveleft = $(".map_area_miami").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_keywest").click(function(){
+		var moveleft = $(".map_area_keywest").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_orlando").click(function(){
+		var moveleft = $(".map_area_orlando").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_boston").click(function(){
+		var moveleft = $(".map_area_boston").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_tampa").click(function(){
+		var moveleft = $(".map_area_tampa").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_dc").click(function(){
+		var moveleft = $(".map_area_dc").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+	$(".map_area_seoul").click(function(){
+		var moveleft = $(".map_area_seoul").attr("coords").split(",")[0];
+		$(".moving_character").animate({left:moveleft},500);
+	
+	});
+})
+</script>
+<body>
+<div class="card">
+	<div class="greeting">
+		<i class="fa fa-birthday-cake fa-4x"></i> Happy Birthday to Yuki! Plz double-click to open your 
+		<i class="fa fa-gift fa-4x"></i>
+	</div>
+	<img src="./imgs/envelope.png" height = "385" width = "600"/>
+</div>
+
+<div class = "header">
+</div>
+
+<div class="time_line">
+	<img class="background" src="./imgs/timeline_0.png" height = "682" width = "1024" usemap="#timeline_map"/>
+	<img class="moving_character" src="./imgs/character.png" height = "40" width = "40"/>
+	<map name="timeline_map">
+		<area class="map_area_osu" shape="circle" coords="168,545,10">
+		<area class="map_area_miami" shape="circle" coords="278,164,10">
+		<area class="map_area_keywest" shape="circle" coords="388,581,10">
+		<area class="map_area_orlando" shape="circle" coords="498,105,10">
+		<area class="map_area_boston" shape="circle" coords="608,542,10">
+		<area class="map_area_tampa" shape="circle" coords="718,72,10">
+		<area class="map_area_dc" shape="circle" coords="828,617,10">
+		<area class="map_area_seoul" shape="circle" coords="938,168,10">
+	</map>
+</div>
+
+<div class="geo_map">
+<div id="vmap_us" style="width: 0px; height: 0px"></div>
+<div id="vmap_cn" style="width: 0px; height: 0px"></div>
+<div id="vmap_world" style="width: 0px; height: 0px"></div>
+</div>
+<div class="wrapper">
+ <div class="title_bar"></div>
+ <div class="geo_nav">
+  <ul>
+   <li class="selected">OSU</li>
+   <li>Miami</li>
+   <li>Key West</li>
+   <li>Bahama</li>
+   <li>Orlando</li>
+   <li>Tampa</li>
+   <li>Washinton</li>
+   <li>Seoul</li>
+   <li>Continued...</li>
+  </ul>
+ </div>
+ <div class="album">
+  <div class="album_content">
+   <a class="bd_lbtn"></a>
+   <div class="album_nav">
+    <div class="bd_long">
+     <ul>
+      <li>
+      <div class="bc_chgTitle">Ohio State Univ, Columbus</div>
+      <a><img src="imgs/osu_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Miami, Florida</div>
+      <a href="#" target="blank"><img src="./imgs/miami_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Key West, Florida</div>
+      <a href="#" target="blank"><img src="./imgs/keywest_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Bahamas, Caribbean</div>
+      <a href="#" target="blank"><img src="./imgs/bahamas_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Orlando, Florida</div>
+      <a href="#" target="blank"><img src="./imgs/orlando_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Tampa, Florida</div>
+      <a href="#" target="blank"><img src="./imgs/tampa_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Washinton, DC</div>
+      <a href="#" target="blank"><img src="./imgs/osu_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Seoul, Korea</div>
+      <a href="#" target="blank"><img src="./imgs/seoul_0.jpg" width="500px" height="400px" /></a>
+      </li>
+	  
+	  <li>
+      <div class="bc_chgTitle">Shanghai, China</div>
+      <a href="#" target="blank"><img src="./imgs/seoul_0.jpg" width="500px" height="400px" /></a>
+      </li>
+     </ul>
+    </div>
+   </div>
+   <a class="bd_rbtn"></a>
+  </div>
+ </div>
+</div>
+<div class="cong">
+</div>
+<script language="javascript">
+var cutItm=0;
+
+function autoPlay(){
+	cutItm++;
+	if(cutItm>11){
+		cutItm=0;
+	}
+	$(".geo_nav li").removeClass("selected");
+	$(".geo_nav li").eq(cutItm).addClass("selected");
+    var leftVal=cutItm * 500;
+    $(".bd_long").animate({left:-leftVal},500);
+}
+
+var timeer=setInterval(autoPlay,3000);
+$(".geo_nav,.album_content").hover(function(){clearInterval(timeer)},function(){timeer=setInterval(autoPlay,3000);});
+
+$(".geo_nav li").click(function(){
+	cutItm=$(".geo_nav li").index(this);
+	$(".geo_nav li").removeClass("selected");$(this).addClass("selected");
+	var leftVal=cutItm * 500;
+    $(".bd_long").animate({left:-leftVal},500);
+	});
+$(".bd_lbtn").click(function(){
+	cutItm--;
+	if(cutItm<0){
+		cutItm=11;
+	}
+	$(".geo_nav li").removeClass("selected");
+	$(".geo_nav li").eq(cutItm).addClass("selected");
+    var leftVal=cutItm * 500;
+    $(".bd_long").animate({left:-leftVal},500);
+});
+$(".bd_rbtn").click(function(){
+	cutItm++;
+	if(cutItm>11){
+		cutItm=0;
+	}
+	$(".geo_nav li").removeClass("selected");
+	$(".geo_nav li").eq(cutItm).addClass("selected");
+    var leftVal=cutItm * 500;
+    $(".bd_long").animate({left:-leftVal},500);
+});
+</script>
+<div class="cong">
+<p>Happy Birthday to Yuki!</p>
+</div>
+</body>
+</html>
