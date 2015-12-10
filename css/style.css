@@ -11,6 +11,7 @@ from,select,input{margin:0;padding:0;vertical-align:middle;}
 a{color:#000;text-decoration:none;}
 a:hover{text-decoration:underline;}
 .greeting{text-align:center; padding-top:50px; font:normal 14px/24px "Comic Sans MS";}
+.album_wrapper{text-align:center;}
 .clear{clear:both;visibility:hidden;height:0;line-height:0;font-size:0;}
 .clearfix:after{clear:both;content:".";height:0;display:block;visibility:hidden;}
 .clearfix{*zoom:1;}
@@ -38,7 +39,7 @@ a:hover{text-decoration:underline;}
 .album_nav { float: left; height: 400px; width: 500px; overflow:hidden; position:relative}
 .bd_long { width: 4500px; position: absolute; left: 0px; top: 0px; height:400px; }
 .bd_long ul li { height: 400px; width: 500px; float: left; font-family: "Comic Sans MS"; }
-.bc_chgTitle { height: 54px; text-align: center; width: 500px; padding-top: 9px; font: bold 16px/54px "Comic Sans MS"; }
+.bc_chgTitle { height: 50px; text-align: center; width: 500px; padding-top: 9px; font: bold 16px/54px "Comic Sans MS"; }
 .bd_lbtn img,.bd_rbtn img{cursor:pointer}
 .bd_long ul li p { font-size: 14px; line-height: 22px; padding-top: 100px; }
 .cong{text-align:center;margin:50px 0; font:normal 14px/24px "Comic Sans MS"; display: none;}
