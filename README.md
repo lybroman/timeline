@@ -1,6 +1,6 @@
 # timeline
 -----------------------------------------
-a timeline record of yuki &amp; yubo
+a timeline record of my trip
 -----------------------------------------
 
   + record our trip
